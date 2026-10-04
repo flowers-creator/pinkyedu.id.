@@ -105,6 +105,13 @@ img{max-width:100%;display:block}
 .highlight-card:hover .hi-ic{transform:rotate(15deg) scale(1.15)}
 .highlight-card h4{font-size:13px;font-weight:700;color:var(--pink-700)}
 .highlight-card p{font-size:11px;color:var(--ink-mute);line-height:1.4}
+.advantage-list{display:flex;flex-direction:column;gap:10px}
+.advantage-card{background:var(--white);border-radius:var(--radius-sm);padding:14px 16px;border:1px solid var(--line);box-shadow:var(--shadow-sm);display:flex;gap:12px;align-items:flex-start;transition:all .25s}
+.advantage-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-md);border-color:var(--pink-200)}
+.advantage-card .adv-ic{width:42px;height:42px;border-radius:12px;flex-shrink:0;background:linear-gradient(135deg,var(--pink-200),var(--pink-400));display:flex;align-items:center;justify-content:center;font-size:20px;box-shadow:0 3px 10px rgba(244,127,184,.25)}
+.advantage-card .adv-body{flex:1;min-width:0}
+.advantage-card h4{font-size:13.5px;font-weight:700;color:var(--pink-700);margin-bottom:3px}
+.advantage-card p{font-size:12px;color:var(--ink-soft);line-height:1.5}
 .why-scroll{display:flex;gap:12px;overflow-x:auto;padding:4px 16px 16px;scroll-snap-type:x mandatory;-ms-overflow-style:none;scrollbar-width:none}
 .why-scroll::-webkit-scrollbar{display:none}
 .why-card{min-width:170px;flex-shrink:0;scroll-snap-align:start;background:var(--white);border-radius:var(--radius);padding:16px;border:1px solid var(--line);box-shadow:var(--shadow-sm);transition:all .25s}
@@ -341,6 +348,52 @@ img{max-width:100%;display:block}
       <div class="why-card"><div class="wi">🤝</div><h4>Pelayanan Ramah</h4><p>Pelanggan dapat menghubungi admin apabila membutuhkan informasi mengenai pesanan.</p></div>
     </div>
     <section class="section">
+      <h2 class="section-title">Keunggulan PinkyEdu 💗</h2>
+      <p class="section-sub">Alasan PinkyEdu jadi pilihan mahasiswa</p>
+      <div class="advantage-list">
+        <div class="advantage-card">
+          <div class="adv-ic">🧪</div>
+          <div class="adv-body"><h4>Margin Biologi Khusus Pendidikan IPA UTM</h4><p>Layanan Margin Biologi kami rancang khusus untuk mahasiswa Pendidikan IPA UTM (Universitas Trunojoyo Madura).</p></div>
+        </div>
+        <div class="advantage-card">
+          <div class="adv-ic">🎓</div>
+          <div class="adv-body"><h4>Terbuka untuk Semua Mahasiswa</h4><p>Untuk layanan Jasa Daftar Pustaka, Jasa Merapikan Format File, dan Cek Turnitin bisa dipesan oleh mahasiswa dari kampus, prodi, dan fakultas mana saja.</p></div>
+        </div>
+        <div class="advantage-card">
+          <div class="adv-ic">💰</div>
+          <div class="adv-body"><h4>Harga Transparan & Terjangkau</h4><p>Semua harga ditampilkan jelas di website, bisa langsung dihitung otomatis sesuai jumlah pesananmu.</p></div>
+        </div>
+        <div class="advantage-card">
+          <div class="adv-ic">⚡</div>
+          <div class="adv-body"><h4>Proses Cepat & Mudah</h4><p>Pilih layanan → masukkan keranjang → checkout → konfirmasi. Tanpa ribet, bisa dilakukan dari HP.</p></div>
+        </div>
+        <div class="advantage-card">
+          <div class="adv-ic">📎</div>
+          <div class="adv-body"><h4>Upload File Langsung dari Website</h4><p>Untuk layanan yang membutuhkan file, kamu bisa upload langsung saat checkout.</p></div>
+        </div>
+        <div class="advantage-card">
+          <div class="adv-ic">📅</div>
+          <div class="adv-body"><h4>Bisa Pilih Waktu Selesai</h4><p>Tentukan sendiri tanggal dan jam selesai pesananmu, minimal H-1 dari hari pemesanan.</p></div>
+        </div>
+        <div class="advantage-card">
+          <div class="adv-ic">💬</div>
+          <div class="adv-body"><h4>Pesan Otomatis ke WhatsApp Admin</h4><p>Detail pesanan langsung terkirim ke WhatsApp admin setelah kamu konfirmasi, tidak perlu ketik manual.</p></div>
+        </div>
+        <div class="advantage-card">
+          <div class="adv-ic">📦</div>
+          <div class="adv-body"><h4>Riwayat Pesanan Tersimpan</h4><p>Semua pesananmu tercatat rapi dan bisa dilihat kembali kapan saja di menu Pesanan.</p></div>
+        </div>
+        <div class="advantage-card">
+          <div class="adv-ic">🔒</div>
+          <div class="adv-body"><h4>Data Pribadi Aman & Rahasia</h4><p>Semua data pribadi, file, dan dokumen yang kamu kirimkan dijaga kerahasiaannya. Tidak akan dibagikan ke pihak lain tanpa izin.</p></div>
+        </div>
+        <div class="advantage-card">
+          <div class="adv-ic">🤝</div>
+          <div class="adv-body"><h4>Admin Ramah & Siap Membantu</h4><p>Ada pertanyaan? Kamu bisa langsung tanyakan pesananmu ke admin kapan pun.</p></div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
       <h2 class="section-title">Yang Bisa Kamu Pesan</h2>
       <p class="section-sub">Pilih layanan sesuai kebutuhanmu</p>
       <div class="product-grid" id="homeProducts"></div>
@@ -499,9 +552,9 @@ const SOURCES_TIERS=generateSourcesTiers();
 const PAGES_TIERS=generatePagesTiers();
 const PRODUCTS=[
 {id:'margin-biologi',name:'Margin Biologi',category:'margin',icon:'🧪',pricingType:'per_unit',price:13000,unit:'margin',stock:12,desc:'Penyediaan Margin Biologi khusus untuk mahasiswa Pendidikan IPA UTM (Universitas Trunojoyo Madura). Membantu memenuhi kebutuhan margin atau perlengkapan yang digunakan dalam kegiatan praktikum Biologi.',services:['Menyediakan Margin Biologi sesuai kebutuhan mahasiswa Pendidikan IPA UTM (Universitas Trunojoyo Madura).','Jumlah produk disesuaikan dengan pesanan.','Produk disiapkan sebelum diserahkan kepada pelanggan.','Kondisi produk diperiksa sebelum diberikan.','Produk dapat digunakan untuk kebutuhan kegiatan praktikum atau perkuliahan Biologi.'],docs:['Kebutuhan praktikum Biologi','Perkuliahan Biologi'],terms:['Khusus untuk mahasiswa Pendidikan IPA UTM (Universitas Trunojoyo Madura).','Stok terbatas, maksimal pembelian sesuai stok tersedia.'],needsFile:false,faq:[{q:'Apakah bisa pesan lebih dari 12?',a:'Untuk saat ini stok maksimal 12 margin per pesanan.'},{q:'Khusus untuk siapa layanan ini?',a:'Margin Biologi ini dikhususkan untuk mahasiswa Pendidikan IPA UTM (Universitas Trunojoyo Madura).'},{q:'Bagaimana cara pengambilan?',a:'Admin akan menginformasikan detail pengambilan setelah pesanan dikonfirmasi.'}]},
-{id:'daftar-pustaka',name:'Jasa Pembuatan & Perapian Daftar Pustaka',category:'pustaka',icon:'📚',pricingType:'sources',unit:'sumber',desc:'PinkyEdu membantu membuat dan merapikan daftar pustaka agar lebih rapi, terstruktur, konsisten, dan sesuai format yang dibutuhkan.',priceTiers:SOURCES_TIERS,services:['Membuat daftar pustaka berdasarkan sumber yang diberikan.','Menyusun informasi sumber secara sistematis.','Menyesuaikan format penulisan.','Menyamakan format seluruh daftar pustaka.','Mengatur kapitalisasi.','Mengatur huruf miring.','Merapikan tanda baca.','Merapikan nama penulis.','Mengurutkan berdasarkan abjad.','Menghindari sumber yang sama ditulis berulang.','Mengolah sumber buku, jurnal, artikel, website, prosiding, skripsi, tesis, dan sumber akademik lainnya.','Mengatur jarak antarbaris.','Mengatur hanging indent.','Menyamakan font.','Melakukan pengecekan akhir.'],docs:['Makalah','Proposal','Artikel','Laporan','Modul','Tugas kuliah','Karya tulis','Dokumen akademik lainnya'],terms:['Layanan ini hanya mencakup pembuatan dan perapian daftar pustaka berdasarkan sumber yang diberikan pelanggan.'],needsFile:true,faq:[{q:'Apakah sumber harus lengkap?',a:'Ya, pelanggan perlu memberikan sumber yang ingin dibuat daftar pustakanya.'},{q:'Berapa lama pengerjaan?',a:'Estimasi akan diinformasikan admin setelah pesanan dikonfirmasi.'}]},
-{id:'rapikan-file',name:'Jasa Merapikan Format File',category:'file',icon:'📄',pricingType:'pages',unit:'halaman',desc:'PinkyEdu membantu merapikan format dokumen akademik agar lebih terstruktur, konsisten, dan nyaman dibaca.',priceTiers:PAGES_TIERS,services:['Perapian format teks','Perapian paragraf','Pengaturan spasi','Pengaturan margin','Perapian halaman','Pengaturan heading','Perapian nomor halaman','Perapian tabel','Perapian gambar','Perapian daftar isi','Perapian bagian dokumen lainnya'],docs:['Makalah','Proposal','Artikel','Modul','Laporan','Tugas kuliah','Dokumen akademik lainnya'],terms:['Daftar pustaka tidak termasuk dalam jasa merapikan file.'],needsFile:true,faq:[{q:'Format file apa yang diterima?',a:'Umumnya .doc, .docx, atau .pdf. Jika berbeda, bisa dikonsultasikan ke admin.'},{q:'Apakah termasuk edit isi?',a:'Tidak, layanan hanya merapikan format, bukan mengubah isi dokumen.'}]},
-{id:'cek-turnitin',name:'Jasa Cek Turnitin',category:'turnitin',icon:'🔍',pricingType:'flat',price:3000,unit:'pesanan',desc:'PinkyEdu menyediakan jasa cek Turnitin untuk membantu mahasiswa mengetahui tingkat similarity pada dokumen akademik sebelum digunakan atau dikumpulkan.',services:['Pengecekan similarity.','Menampilkan persentase similarity.','Memeriksa dokumen yang dikirim pelanggan.','Memberikan hasil pengecekan.','Pelanggan dapat melakukan pengecekan ulang setelah revisi.','Pengecekan ulang dihitung sebagai pesanan baru.'],docs:['Makalah','Proposal','Artikel','Laporan','Skripsi','Tugas kuliah','Karya tulis','Dokumen akademik lainnya'],terms:['Pengecekan ulang dihitung sebagai pesanan baru.'],needsFile:true,detailChecks:['No Repository','No Resubmit','No Repository Storage','Hasil Similarity Turnitin','File hasil pengecekan diberikan kepada pelanggan.'],faq:[{q:'Apakah hasil berupa screenshot?',a:'Hasil akan diberikan sesuai kesepakatan dengan admin.'},{q:'Berapa kali bisa cek ulang?',a:'Setiap pengecekan ulang dihitung sebagai pesanan baru.'}]}
+{id:'daftar-pustaka',name:'Jasa Pembuatan & Perapian Daftar Pustaka',category:'pustaka',icon:'📚',pricingType:'sources',unit:'sumber',desc:'PinkyEdu membantu membuat dan merapikan daftar pustaka agar lebih rapi, terstruktur, konsisten, dan sesuai format yang dibutuhkan. Terbuka untuk mahasiswa dari kampus, prodi, dan fakultas mana saja.',priceTiers:SOURCES_TIERS,services:['Membuat daftar pustaka berdasarkan sumber yang diberikan.','Menyusun informasi sumber secara sistematis.','Menyesuaikan format penulisan.','Menyamakan format seluruh daftar pustaka.','Mengatur kapitalisasi.','Mengatur huruf miring.','Merapikan tanda baca.','Merapikan nama penulis.','Mengurutkan berdasarkan abjad.','Menghindari sumber yang sama ditulis berulang.','Mengolah sumber buku, jurnal, artikel, website, prosiding, skripsi, tesis, dan sumber akademik lainnya.','Mengatur jarak antarbaris.','Mengatur hanging indent.','Menyamakan font.','Melakukan pengecekan akhir.'],docs:['Makalah','Proposal','Artikel','Laporan','Modul','Tugas kuliah','Karya tulis','Dokumen akademik lainnya'],terms:['Layanan ini hanya mencakup pembuatan dan perapian daftar pustaka berdasarkan sumber yang diberikan pelanggan.','Terbuka untuk mahasiswa dari kampus, prodi, dan fakultas mana saja.'],needsFile:true,faq:[{q:'Apakah sumber harus lengkap?',a:'Ya, pelanggan perlu memberikan sumber yang ingin dibuat daftar pustakanya.'},{q:'Khusus untuk kampus tertentu?',a:'Tidak, layanan ini terbuka untuk mahasiswa dari kampus, prodi, dan fakultas mana saja.'},{q:'Berapa lama pengerjaan?',a:'Estimasi akan diinformasikan admin setelah pesanan dikonfirmasi.'}]},
+{id:'rapikan-file',name:'Jasa Merapikan Format File',category:'file',icon:'📄',pricingType:'pages',unit:'halaman',desc:'PinkyEdu membantu merapikan format dokumen akademik agar lebih terstruktur, konsisten, dan nyaman dibaca. Terbuka untuk mahasiswa dari kampus, prodi, dan fakultas mana saja.',priceTiers:PAGES_TIERS,services:['Perapian format teks','Perapian paragraf','Pengaturan spasi','Pengaturan margin','Perapian halaman','Pengaturan heading','Perapian nomor halaman','Perapian tabel','Perapian gambar','Perapian daftar isi','Perapian bagian dokumen lainnya'],docs:['Makalah','Proposal','Artikel','Modul','Laporan','Tugas kuliah','Dokumen akademik lainnya'],terms:['Daftar pustaka tidak termasuk dalam jasa merapikan file.','Terbuka untuk mahasiswa dari kampus, prodi, dan fakultas mana saja.'],needsFile:true,faq:[{q:'Format file apa yang diterima?',a:'Umumnya .doc, .docx, atau .pdf. Jika berbeda, bisa dikonsultasikan ke admin.'},{q:'Khusus untuk kampus tertentu?',a:'Tidak, layanan ini terbuka untuk mahasiswa dari kampus, prodi, dan fakultas mana saja.'},{q:'Apakah termasuk edit isi?',a:'Tidak, layanan hanya merapikan format, bukan mengubah isi dokumen.'}]},
+{id:'cek-turnitin',name:'Jasa Cek Turnitin',category:'turnitin',icon:'🔍',pricingType:'flat',price:3000,unit:'pesanan',desc:'PinkyEdu menyediakan jasa cek Turnitin untuk membantu mahasiswa mengetahui tingkat similarity pada dokumen akademik sebelum digunakan atau dikumpulkan. Terbuka untuk mahasiswa dari kampus, prodi, dan fakultas mana saja.',services:['Pengecekan similarity.','Menampilkan persentase similarity.','Memeriksa dokumen yang dikirim pelanggan.','Memberikan hasil pengecekan.','Pelanggan dapat melakukan pengecekan ulang setelah revisi.','Pengecekan ulang dihitung sebagai pesanan baru.'],docs:['Makalah','Proposal','Artikel','Laporan','Skripsi','Tugas kuliah','Karya tulis','Dokumen akademik lainnya'],terms:['Pengecekan ulang dihitung sebagai pesanan baru.','Terbuka untuk mahasiswa dari kampus, prodi, dan fakultas mana saja.'],needsFile:true,detailChecks:['No Repository','No Resubmit','No Repository Storage','Hasil Similarity Turnitin','File hasil pengecekan diberikan kepada pelanggan.'],faq:[{q:'Apakah hasil berupa screenshot?',a:'Hasil akan diberikan sesuai kesepakatan dengan admin.'},{q:'Khusus untuk kampus tertentu?',a:'Tidak, layanan ini terbuka untuk mahasiswa dari kampus, prodi, dan fakultas mana saja.'},{q:'Berapa kali bisa cek ulang?',a:'Setiap pengecekan ulang dihitung sebagai pesanan baru.'}]}
 ];
 const CATEGORIES=[{id:'all',label:'Semua'},{id:'margin',label:'Margin Biologi'},{id:'pustaka',label:'Daftar Pustaka'},{id:'file',label:'Merapikan File'},{id:'turnitin',label:'Cek Turnitin'}];
 let state={cart:[],orders:[],user:null,users:[],reviews:[],stock:{},favorites:[],currentCategory:'all',search:'',currentDetail:null,pendingOrder:null,ratingOrder:null,ratingValue:0,selectedPayment:null,checkoutFiles:{}};
